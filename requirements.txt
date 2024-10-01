@@ -9,8 +9,6 @@ isort==5.13.2
 kiwisolver==1.4.4
 matplotlib==3.9.2
 mccabe==0.7.0
-mkl_random==1.2.7
-mkl-service==2.4.0
 numpy==1.26.4
 packaging==24.1
 pillow==10.4.0
