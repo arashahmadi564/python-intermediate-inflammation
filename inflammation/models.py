@@ -32,17 +32,15 @@ def daily_min(data):
     """Calculate the daily min of a 2d inflammation data array."""
     return np.min(data, axis=0)
 
-def patient_normalise(data):
-    """
-    Normalise patient data from a 2D inflammation data array.
 
-    NaN values are ignored, and normalised to 0.
 
-    Negative values are rounded to 0.
-    """
-    max_data = np.nanmax(data, axis=1)
-    with np.errstate(invalid='ignore', divide='ignore'):
-        normalised = data / max_data[:, np.newaxis]
-    normalised[np.isnan(normalised)] = 0
-    normalised[normalised < 0] = 0
-    return normalised
+def daily_standard_deviation(data):
+    """Computes and returns standard deviation for a 2d inflammation data array"""
+    # mmm = np.mean(data, axis=0)
+    # devs = []
+    # for entry in data:
+    #     devs.append((entry - mmm) * (entry - mmm))
+
+    std_devs = np.std(data, axis=0)
+    return std_devs
+
