@@ -40,5 +40,5 @@ def daily_standard_deviation(data):
     for entry in data:
         devs.append((entry - mmm) * (entry - mmm))
 
-    s_dev2 = sum(devs) / len(data)
+    std_devs = sum(devs) / len(data)
     return std_devs
