@@ -34,11 +34,11 @@ def daily_min(data):
 
 
 def daily_standard_deviation(data):
-    """Computes and returns standard deviation for data."""
-    mmm = np.mean(data, axis=0)
-    devs = []
-    for entry in data:
-        devs.append((entry - mmm) * (entry - mmm))
+    """Computes and returns standard deviation for a 2d inflammation data array"""
+    # mmm = np.mean(data, axis=0)
+    # devs = []
+    # for entry in data:
+    #     devs.append((entry - mmm) * (entry - mmm))
 
-    std_devs = sum(devs) / len(data)
+    std_devs = np.std(data, axis=0)
     return std_devs
